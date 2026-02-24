@@ -3,15 +3,15 @@ par=set(['(','{','['])
 des={'[':']','{':'}','(':')'}
 stack=[]
 
-for i in s:
-    if i in par:
-        stack.append(des[i])
+for ch in s:
+    if ch in par:
+        stack.append(des[ch])
         
-    elif stack and i==stack[-1]:
+    elif stack and ch==stack[-1]:
         stack.pop()
         
         
-    elif i in des.values():
+    elif ch in des.values():
         print('Not balanced')
         break
     
